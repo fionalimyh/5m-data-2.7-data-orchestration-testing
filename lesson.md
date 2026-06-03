@@ -244,7 +244,11 @@ cd meltano-orchestration
 
 ### Using the Dagster Subprocess
 
-Replace the content of `meltano-orchestration/meltano_orchestration/assets.py` with the following and also please change the path `cwd = '/path/to/your/folder/meltano_resale_in_lesson_2_6'`  and `cwd = '/path/to/your/folder/resale_flat_in_lesson_2_6'` with your respective path in lesson 2.6:
+Replace the content of `meltano-orchestration/meltano_orchestration/assets.py` with the following and also please change the path
+
+`cwd = '/path/to/your/folder/meltano_resale_in_lesson_2_6'`  and 
+
+`cwd = '/path/to/your/folder/resale_flat_in_lesson_2_6'` with your respective path in lesson 2.6:
 
 ```python
 # assets.py
@@ -357,7 +361,7 @@ resale_flat:
 
 Please use the above format in order to be compatible with Dagster. 
 
-Then create a new Dagster project that points to the directory.
+Then create a new Dagster project that points to the directory. Replace `#full-path-to-the-resale-flat-dbt-project-directory` with the actual project path (example: `/Users/Dev/5m-data-2.6-data-pipelines-orchestration/resale_flat`)
 
 ```bash
 dagster-dbt project scaffold --project-name resale_flat_dagster --dbt-project-dir #full-path-to-the-resale-flat-dbt-project-directory
