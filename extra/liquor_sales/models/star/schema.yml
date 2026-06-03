@@ -9,6 +9,41 @@ models:
         tests:
           - unique
           - not_null
+      - name: store_number
+        tests:
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              arguments:
+                column_type: string
+      - name: store_name
+        tests:
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              arguments:
+                column_type: string
+      - name: address
+        tests:
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              arguments:
+                column_type: string
+      - name: city
+        tests:
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              arguments:
+                column_type: string
+      - name: zip_code
+        tests:
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              arguments:
+                column_type: string
+      - name: county_number
+        tests:
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              arguments:
+                column_type: string
+      - name: county
+        tests:
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              arguments:
+                column_type: string
   - name: dim_item
     description: "Dimension table for item."
     columns:
@@ -17,3 +52,55 @@ models:
         tests:
           - unique
           - not_null
+      - name: pack
+        description: "The number of bottles in a pack"
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 1  # Replace with your actual MIN(pack) result
+              max_value: 160 # Replace with your actual MAX(pack) result
+      - name: bottle_volume_ml
+        description: "The volume of the bottle in milliliters"
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0 # Replace with your actual MIN(bottle_volume_ml) result
+              max_value: 378000 # Replace with your actual MAX(bottle_volume_ml) result
+      - name: item_number
+        tests:
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              arguments:
+                column_type: string
+      - name: item_description
+        tests:
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              arguments:
+                column_type: string
+      - name: category
+        tests:
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              arguments:
+                column_type: string
+      - name: category_name
+        tests:
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              arguments:
+                column_type: string
+      - name: vendor_number
+        tests:
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              arguments:
+                column_type: string
+      - name: vendor_name
+        tests:
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              arguments:
+                column_type: string
+      - name: pack
+        tests:
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              arguments:
+                column_type: int64
+      - name: bottle_volume_ml
+        tests:
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              arguments:
+                column_type: int64
