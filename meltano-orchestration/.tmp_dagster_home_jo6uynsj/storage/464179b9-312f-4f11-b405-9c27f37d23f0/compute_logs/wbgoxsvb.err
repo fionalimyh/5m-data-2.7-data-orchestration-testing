@@ -1,0 +1,62 @@
+[32m2026-06-03 16:24:03 +0800[0m - dagster - [34mDEBUG[0m - daily_elt_pipeline - 464179b9-312f-4f11-b405-9c27f37d23f0 - 13202 - LOGS_CAPTURED - Started capturing logs in process (pid: 13202).
+[32m2026-06-03 16:24:03 +0800[0m - dagster - [34mDEBUG[0m - daily_elt_pipeline - 464179b9-312f-4f11-b405-9c27f37d23f0 - 13202 - pipeline_meltano - STEP_START - Started execution of step "pipeline_meltano".
+[2m2026-06-03T08:24:04.625180Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2026-06-03T08:24:04.766797Z[0m [[33m[1mwarning  [0m] [1mA new version of Meltano is available (v4.2.0) and you are currently running v4.0.8. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+[2m2026-06-03T08:24:04.864332Z[0m [[32m[1minfo     [0m] [1msetup plugin alembic.autogenerate.schemas[0m
+[2m2026-06-03T08:24:04.864582Z[0m [[32m[1minfo     [0m] [1msetup plugin alembic.autogenerate.tables[0m
+[2m2026-06-03T08:24:04.864765Z[0m [[32m[1minfo     [0m] [1msetup plugin alembic.autogenerate.types[0m
+[2m2026-06-03T08:24:04.864919Z[0m [[32m[1minfo     [0m] [1msetup plugin alembic.autogenerate.constraints[0m
+[2m2026-06-03T08:24:04.865110Z[0m [[32m[1minfo     [0m] [1msetup plugin alembic.autogenerate.defaults[0m
+[2m2026-06-03T08:24:04.865329Z[0m [[32m[1minfo     [0m] [1msetup plugin alembic.autogenerate.comments[0m
+[2m2026-06-03T08:24:05.239018Z[0m [[32m[1minfo     [0m] [1mRunning job with name 'dev:tap-postgres-to-target-bigquery' and run ID '019e8c95-243e-7887-ba5b-8174f80dc6ce'[0m
+[2m2026-06-03T08:24:05.738049Z[0m [[32m[1minfo     [0m] [1mUsing systemdb state backend  [0m
+[2m2026-06-03T08:24:05.741120Z[0m [[33m[1mwarning  [0m] [1mNo state was found, complete import.[0m
+[2m2026-06-03T08:24:05.744640Z[0m [[33m[1mwarning  [0m] [1mStream `public-resale_flat_prices_from_jan_2017` was not found in the catalog[0m
+[2m2026-06-03T08:24:06.170465Z[0m [[32m[1minfo     [0m] [1mTraceback (most recent call last):[0m [36mname[0m=[35mtarget-bigquery[0m
+[2m2026-06-03T08:24:06.170923Z[0m [[32m[1minfo     [0m] [1m  File "/home/fionalyh/SCTP NTU/module-2/5m-data-2.6-data-pipelines-orchestration/meltano-resale/.meltano/loaders/target-bigquery/venv/bin/target-bigquery", line 6, in <module>[0m [36mname[0m=[35mtarget-bigquery[0m
+[2m2026-06-03T08:24:06.171358Z[0m [[32m[1minfo     [0m] [1m    from target_bigquery.target import TargetBigQuery[0m [36mname[0m=[35mtarget-bigquery[0m
+[2m2026-06-03T08:24:06.171670Z[0m [[32m[1minfo     [0m] [1m  File "/home/fionalyh/SCTP NTU/module-2/5m-data-2.6-data-pipelines-orchestration/meltano-resale/.meltano/loaders/target-bigquery/venv/lib/python3.11/site-packages/target_bigquery/target.py", line 30, in <module>[0m [36mname[0m=[35mtarget-bigquery[0m
+[2m2026-06-03T08:24:06.172080Z[0m [[32m[1minfo     [0m] [1m    from singer_sdk import Sink[0m [36mname[0m=[35mtarget-bigquery[0m
+[2m2026-06-03T08:24:06.172386Z[0m [[32m[1minfo     [0m] [1m  File "/home/fionalyh/SCTP NTU/module-2/5m-data-2.6-data-pipelines-orchestration/meltano-resale/.meltano/loaders/target-bigquery/venv/lib/python3.11/site-packages/singer_sdk/__init__.py", line 5, in <module>[0m [36mname[0m=[35mtarget-bigquery[0m
+[2m2026-06-03T08:24:06.172683Z[0m [[32m[1minfo     [0m] [1m    from singer_sdk import streams[0m [36mname[0m=[35mtarget-bigquery[0m
+[2m2026-06-03T08:24:06.172971Z[0m [[32m[1minfo     [0m] [1m  File "/home/fionalyh/SCTP NTU/module-2/5m-data-2.6-data-pipelines-orchestration/meltano-resale/.meltano/loaders/target-bigquery/venv/lib/python3.11/site-packages/singer_sdk/streams/__init__.py", line 5, in <module>[0m [36mname[0m=[35mtarget-bigquery[0m
+[2m2026-06-03T08:24:06.173285Z[0m [[32m[1minfo     [0m] [1m    from singer_sdk.streams.core import Stream[0m [36mname[0m=[35mtarget-bigquery[0m
+[2m2026-06-03T08:24:06.173546Z[0m [[32m[1minfo     [0m] [1m  File "/home/fionalyh/SCTP NTU/module-2/5m-data-2.6-data-pipelines-orchestration/meltano-resale/.meltano/loaders/target-bigquery/venv/lib/python3.11/site-packages/singer_sdk/streams/core.py", line 31, in <module>[0m [36mname[0m=[35mtarget-bigquery[0m
+[2m2026-06-03T08:24:06.173866Z[0m [[32m[1minfo     [0m] [1m    from singer_sdk.helpers._batch import ([0m [36mname[0m=[35mtarget-bigquery[0m
+[2m2026-06-03T08:24:06.174110Z[0m [[32m[1minfo     [0m] [1m  File "/home/fionalyh/SCTP NTU/module-2/5m-data-2.6-data-pipelines-orchestration/meltano-resale/.meltano/loaders/target-bigquery/venv/lib/python3.11/site-packages/singer_sdk/helpers/_batch.py", line 12, in <module>[0m [36mname[0m=[35mtarget-bigquery[0m
+[2m2026-06-03T08:24:06.174411Z[0m [[32m[1minfo     [0m] [1m    import fs                 [0m [36mname[0m=[35mtarget-bigquery[0m
+[2m2026-06-03T08:24:06.174632Z[0m [[32m[1minfo     [0m] [1m  File "/home/fionalyh/SCTP NTU/module-2/5m-data-2.6-data-pipelines-orchestration/meltano-resale/.meltano/loaders/target-bigquery/venv/lib/python3.11/site-packages/fs/__init__.py", line 4, in <module>[0m [36mname[0m=[35mtarget-bigquery[0m
+[2m2026-06-03T08:24:06.174855Z[0m [[32m[1minfo     [0m] [1m    __import__("pkg_resources").declare_namespace(__name__)  # type: ignore[0m [36mname[0m=[35mtarget-bigquery[0m
+[2m2026-06-03T08:24:06.175066Z[0m [[32m[1minfo     [0m] [1m    ^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [36mname[0m=[35mtarget-bigquery[0m
+[2m2026-06-03T08:24:06.175319Z[0m [[32m[1minfo     [0m] [1mModuleNotFoundError: No module named 'pkg_resources'[0m [36mname[0m=[35mtarget-bigquery[0m
+[2m2026-06-03T08:24:06.256501Z[0m [[31m[1merror    [0m] [1mLoader failed                 [0m
+[2m2026-06-03T08:24:06.256952Z[0m [[31m[1merror    [0m] [1mBlock run completed           [0m
+[2m2026-06-03T08:24:06.257888Z[0m [[32m[1minfo     [0m] [1mRun completed                 [0m
+[32m2026-06-03 16:24:07 +0800[0m - dagster - [34mWARNING[0m - daily_elt_pipeline - 464179b9-312f-4f11-b405-9c27f37d23f0 - pipeline_meltano - [pipes] did not receive any messages from external process. Check stdout / stderr logs from the external process if possible.
+PipesTempFileContextInjector: Attempted to inject context via a temporary file.
+PipesTempFileMessageReader: Attempted to read messages from a local temporary file.
+
+[32m2026-06-03 16:24:07 +0800[0m - dagster - [34mERROR[0m - [31mdaily_elt_pipeline - 464179b9-312f-4f11-b405-9c27f37d23f0 - 13202 - pipeline_meltano - STEP_FAILURE - Execution of step "pipeline_meltano" failed.
+
+dagster._core.errors.DagsterExecutionStepExecutionError: Error occurred while executing op "pipeline_meltano"::
+
+dagster._core.errors.DagsterPipesExecutionError: External execution process failed with code 1
+
+Stack Trace:
+  File "/home/fionalyh/miniconda3/envs/dagster/lib/python3.11/site-packages/dagster/_core/execution/plan/utils.py", line 57, in op_execution_error_boundary
+    yield
+  File "/home/fionalyh/miniconda3/envs/dagster/lib/python3.11/site-packages/dagster/_utils/__init__.py", line 394, in iterate_with_context
+    next_output = next(iterator)
+                  ^^^^^^^^^^^^^^
+  File "/home/fionalyh/miniconda3/envs/dagster/lib/python3.11/site-packages/dagster/_core/execution/plan/compute_generator.py", line 135, in _coerce_op_compute_fn_to_iterator
+    result = invoke_compute_fn(
+             ^^^^^^^^^^^^^^^^^^
+  File "/home/fionalyh/miniconda3/envs/dagster/lib/python3.11/site-packages/dagster/_core/execution/plan/compute_generator.py", line 115, in invoke_compute_fn
+    return fn(context, **args_to_pass) if context_arg_provided else fn(**args_to_pass)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fionalyh/SCTP NTU/module-2/5m-data-2.7-data-orchestration-testing/meltano-orchestration/meltano_orchestration/assets.py", line 9, in pipeline_meltano
+    return pipes_subprocess_client.run(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fionalyh/miniconda3/envs/dagster/lib/python3.11/site-packages/dagster/_core/pipes/subprocess.py", line 133, in run
+    raise DagsterPipesExecutionError(
+[0m
